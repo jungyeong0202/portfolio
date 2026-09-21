@@ -1,0 +1,495 @@
+/* Portfolio styles: active components only. */
+.balenciaga-detail .detail-hero h1 {
+    font-size: clamp(40px, 5vw, 86px);
+    letter-spacing: -0.045em;
+}
+
+.case-resources {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.case-resources .detail-cta {
+    margin: 0px;
+}
+
+.case-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    text-underline-offset: 6px;
+    text-decoration: underline;
+}
+
+.detail-visual img,
+.detail-visual video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.detail-visual video {
+    background: rgb(17, 17, 17);
+}
+
+.balenciaga-detail .detail-visual {
+    border-radius: 0px;
+    background: transparent;
+}
+
+.case-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 38px;
+    border-bottom: 1px solid var(--detail-line);
+    padding: 26px 0px;
+}
+
+.case-jump a {
+    padding: 6px 0px;
+    color: var(--detail-muted);
+    font-size: 13px;
+}
+
+.case-jump a:hover {
+    color: var(--detail-text);
+}
+
+.case-description {
+    color: var(--detail-muted);
+    font-size: 16px;
+    line-height: 1.85;
+    max-width: 630px;
+}
+
+.case-account-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 24px;
+    margin-top: 56px;
+}
+
+.case-resources {
+    margin-top: 32px;
+}
+
+.case-credit {
+    margin-top: 50px;
+    max-width: 760px;
+    font-size: 12px;
+    color: var(--detail-muted);
+}
+
+@media (width <= 1024px) {
+.balenciaga-detail .detail-hero__inner {
+    gap: 48px;
+}
+}
+
+@media (width <= 768px) {
+.case-account-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.case-account-grid {
+    margin-top: 32px;
+}
+
+.case-jump {
+    gap: 8px 22px;
+}
+}
+
+.balenciaga-detail .detail-hero__inner {
+    min-height: 0px;
+    padding-block: 120px 36px;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.balenciaga-detail .detail-hero h1 {
+    margin-top: 16px;
+    font-size: clamp(40px, 4vw, 72px);
+}
+
+.balenciaga-detail .detail-lead {
+    margin-top: 18px;
+    max-width: none;
+}
+
+.case-hero-video {
+    max-width: 1120px;
+    margin-inline: auto;
+    scroll-margin-top: 100px;
+}
+
+.case-jump {
+    position: sticky;
+    top: 86px;
+    z-index: 100;
+    justify-content: center;
+    margin-top: 32px;
+    padding: 10px 20px;
+    background: rgba(247, 246, 243, 0.94);
+    backdrop-filter: blur(16px);
+    border-block: 1px solid var(--detail-line);
+}
+
+.case-jump a {
+    border-bottom: 2px solid transparent;
+}
+
+.case-jump a[aria-current="location"] {
+    color: var(--detail-text);
+    border-color: currentcolor;
+}
+
+.balenciaga-detail .detail-section {
+    padding-top: 100px;
+    scroll-margin-top: 150px;
+}
+
+.balenciaga-detail .detail-section h2 {
+    font-size: clamp(30px, 2.5vw, 44px);
+}
+
+.case-feature {
+    display: grid;
+    grid-template-columns: minmax(0px, 1.7fr) minmax(0px, 1fr);
+    gap: 64px;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.case-feature--reverse {
+    grid-template-columns: minmax(0px, 1fr) minmax(0px, 1.7fr);
+}
+
+.case-feature--reverse .case-feature-copy {
+    grid-area: 1 / 1;
+}
+
+.case-feature--reverse .case-feature-visual {
+    grid-column: 2;
+}
+
+.case-feature-copy h3 {
+    font-size: 30px;
+    line-height: 1.35;
+    letter-spacing: -0.035em;
+    margin-top: 20px;
+}
+
+.case-feature-copy > p:last-child {
+    max-width: 440px;
+    color: var(--detail-muted);
+    font-size: 16px;
+    line-height: 1.85;
+    margin-top: 20px;
+}
+
+.case-bag-grid {
+    grid-template-columns: minmax(0px, 1.5fr) minmax(0px, 1fr);
+    align-items: start;
+    margin-top: 44px;
+}
+
+.detail-visual .case-filter-image {
+    aspect-ratio: 1152 / 1080;
+    object-fit: cover;
+    object-position: left center;
+}
+
+.case-account-flow {
+    padding-top: 28px;
+    color: var(--detail-muted);
+    font-size: 14px;
+}
+
+.case-account-grid {
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    margin-top: 28px;
+    align-items: start;
+}
+
+.case-closing {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--detail-line);
+}
+
+.case-credit {
+    margin-top: 28px;
+}
+
+.balenciaga-detail .detail-next {
+    margin-block: 64px 60px;
+}
+
+@media (width <= 1024px) {
+.balenciaga-detail .detail-hero__inner {
+    gap: 32px;
+}
+
+.case-feature,
+.case-feature--reverse {
+    gap: 32px;
+    grid-template-columns: 1.3fr 1fr;
+}
+
+.case-feature-copy h3 {
+    font-size: 24px;
+}
+
+.case-account-grid {
+    gap: 16px;
+}
+
+.case-jump {
+    gap: 12px 24px;
+}
+}
+
+@media (width <= 768px) {
+.balenciaga-detail .detail-hero__inner {
+    grid-template-columns: 1fr;
+    padding-block: 110px 28px;
+    gap: 24px;
+}
+
+.case-jump {
+    position: static;
+    justify-content: flex-start;
+    padding-inline: 0px;
+}
+
+.balenciaga-detail .detail-section {
+    padding-top: 64px;
+    scroll-margin-top: 90px;
+}
+
+.case-feature,
+.case-feature--reverse,
+.case-bag-grid,
+.case-account-grid {
+    grid-template-columns: 1fr;
+}
+
+.case-feature--reverse .case-feature-copy,
+.case-feature--reverse .case-feature-visual {
+    grid-area: auto;
+}
+
+.case-feature {
+    gap: 24px;
+    margin-top: 40px;
+}
+}
+
+.balenciaga-detail .detail-header {
+    transition: background-color 0.25s;
+}
+
+.balenciaga-detail .detail-header.is-scrolled {
+    background-color: rgba(255, 255, 255, 0.94);
+}
+
+.balenciaga-detail main > .detail-inner,
+.balenciaga-detail .detail-hero__inner {
+    max-width: 1680px;
+}
+
+.balenciaga-detail .detail-hero__inner {
+    grid-template-columns: 1.35fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.case-project-period {
+    margin-top: 16px;
+    color: var(--detail-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.case-hero-facts {
+    grid-template-columns: 1fr;
+    margin: 0px;
+    border: 0px;
+}
+
+.case-hero-facts .overview-fact {
+    min-height: 0px;
+    padding: 16px 0px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    align-items: baseline;
+    border: 0px;
+}
+
+.case-hero-facts .overview-fact__label {
+    font-size: 14px;
+}
+
+.case-hero-facts .overview-fact__value {
+    margin: 0px;
+}
+
+.balenciaga-detail .detail-hero__copy .detail-cta {
+    margin-top: 24px;
+}
+
+.overview-grid,
+.gallery-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 0px;
+    align-items: start;
+}
+
+.case-description,
+.overview-copy,
+.overview-copy p {
+    max-width: 760px;
+}
+
+.case-overview-points {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 64px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--detail-line);
+}
+
+.case-overview-points h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+}
+
+.case-overview-points p {
+    max-width: 760px;
+    margin-top: 12px;
+    color: var(--detail-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.case-feature,
+.case-feature--reverse {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+    margin-top: 64px;
+}
+
+.case-feature-copy {
+    order: -1;
+    display: block;
+}
+
+.case-feature-copy h3 {
+    margin-top: 0px;
+}
+
+.case-subpages-title + .case-subpage-heading {
+    margin-top: 40px;
+}
+
+.case-subpage-heading h3 {
+    font-size: 30px;
+    line-height: 1.35;
+    letter-spacing: -0.035em;
+}
+
+.case-feature-copy > p:last-child {
+    max-width: 760px;
+    margin-top: 16px;
+}
+
+.case-feature-visual {
+    width: 100%;
+}
+
+.case-hero-video {
+    max-width: none;
+    width: 100%;
+}
+
+.case-bag-grid {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.detail-visual .case-filter-image {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
+
+.case-account-grid {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 24px;
+}
+
+.case-signup-feature {
+    width: 100%;
+    max-width: none;
+}
+
+#main-design > .gallery-heading + .case-feature {
+    margin-top: 40px;
+}
+
+.balenciaga-detail .detail-section {
+    padding-top: 88px;
+}
+
+@media (width <= 768px) {
+.overview-grid,
+.gallery-heading,
+.case-feature-copy {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.balenciaga-detail .detail-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.case-hero-facts .overview-fact {
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.case-bag-grid,
+.case-account-grid {
+    grid-template-columns: 1fr;
+}
+
+.case-signup-feature {
+    max-width: none;
+}
+
+.case-overview-points {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.balenciaga-detail .detail-section {
+    padding-top: 64px;
+}
+
+.case-feature {
+    margin-top: 40px;
+}
+}

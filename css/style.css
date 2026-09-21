@@ -1,0 +1,1532 @@
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+    --color-text: #111;
+    --color-muted: #706d68;
+
+    --color-line: #dad7d1;
+    --color-button-line: #ccc8c2;
+
+    --color-placeholder: #e5e5e5;
+    --color-section: #efeeeb;
+
+    --radius-header: 16px;
+    --radius-button: 12px;
+    --radius-button-mobile: 10px;
+
+    --duration-fast: 0.2s;
+}
+
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.hero-section,
+.work-section,
+.about-section,
+.contact-section,
+.footer {
+    padding-inline: 40px;
+}
+
+
+.project-number,
+.hero-role,
+.scroll-guide,
+.project-meta,
+.about-label,
+.about-item h3,
+.contact-links a,
+.footer p,
+.footer a {
+    font-size: 12px;
+}
+
+
+.project-number,
+.hero-role,
+.project-meta,
+.about-label {
+    color: var(--color-muted);
+}
+
+
+/* =========================================================
+   ARROW ICON
+   ========================================================= */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    z-index: 1000;
+
+    width: calc(100% - 80px);
+    max-width: 1680px;
+
+    transform: translateX(-50%);
+}
+
+
+.glass-header {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-header);
+
+    background-color: rgba(255, 255, 255, 0.35);
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.glass-header.is-scrolled {
+    background-color: rgba(255, 255, 255, 0.94);
+    border-color: rgba(255, 255, 255, 0.72);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 52px;
+
+    padding-inline: 24px;
+}
+
+
+.logo {
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.015em;
+
+    white-space: nowrap;
+}
+
+
+.logo a {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 40px;
+}
+
+
+.gnb-list {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.gnb-list a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 36px;
+
+    padding-inline: 14px;
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-header);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    transition:
+        background-color var(--duration-fast) ease,
+        border-color var(--duration-fast) ease,
+        box-shadow var(--duration-fast) ease;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-section {
+    display: flex;
+    align-items: center;
+
+    min-height: 680px;
+
+    padding-block: 120px;
+}
+
+
+.hero-section .inner {
+    display: grid;
+
+    width: 100%;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(420px, 0.95fr);
+
+    grid-template-areas:
+        "title content"
+        "scroll content";
+
+    gap: 32px 120px;
+
+    align-items: start;
+}
+
+
+.hero-title-wrap {
+    grid-area: title;
+}
+
+
+.hero-title {
+    font-size: clamp(58px, calc(4vw + 3px), 80px);
+    font-weight: 800;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+}
+
+
+.hero-role {
+    margin-top: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+
+.hero-content {
+    grid-area: content;
+}
+
+
+.hero-message {
+    max-width: 620px;
+
+    font-size: clamp(30px, calc(2vw + 1px), 38px);
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.04em;
+}
+
+
+.hero-description {
+    max-width: 580px;
+
+    margin-top: 24px;
+
+    color: var(--color-muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.scroll-guide {
+    grid-area: scroll;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   WORK
+   ========================================================= */
+
+.work-section {
+    padding-bottom: 120px;
+}
+
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(30px, calc(2vw + 1px), 38px);
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   PROJECT COMMON
+   ========================================================= */
+
+.project {
+    position: relative;
+}
+
+
+.project-number {
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+
+.project h3 {
+    font-size: clamp(20px, calc(1vw + 4px), 24px);
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.03em;
+}
+
+
+.project-summary {
+    color: var(--color-muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.project-visual {
+    overflow: hidden;
+
+    background-color: var(--color-placeholder);
+}
+
+
+.project-placeholder {
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-placeholder);
+}
+
+
+.project-visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   PROJECT BUTTON
+   ========================================================= */
+
+.project-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: fit-content;
+    min-height: 48px;
+
+    padding-inline: 18px;
+
+    border: 1px solid var(--color-button-line);
+    border-radius: var(--radius-button);
+
+    background-color: transparent;
+    color: var(--color-text);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        background-color var(--duration-fast) ease,
+        border-color var(--duration-fast) ease,
+        color var(--duration-fast) ease;
+}
+
+
+.project-action__icon {
+    opacity: 0.7;
+
+    transition: opacity var(--duration-fast) ease;
+}
+
+
+.project-action:active {
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   PROJECT 01
+   ========================================================= */
+
+.project--01 {
+    margin-bottom: 130px;
+}
+
+
+.project--01 .project-visual {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.58fr)
+        minmax(220px, 0.72fr);
+
+    gap: 20px;
+
+    aspect-ratio: 1680 / 620;
+
+    background-color: transparent;
+}
+
+
+.project--01 .project-placeholder {
+    min-height: 0;
+}
+
+
+.project--01 .project-header {
+    margin-top: 18px;
+}
+
+
+.project--01 .project-summary {
+    max-width: 520px;
+}
+
+
+/* Project 01도 다른 프로젝트와 동일하게
+   META 아래에 BUTTON 배치 */
+
+.project--01 .project-info {
+    display: grid;
+
+    justify-items: start;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   PROJECT 02
+   ========================================================= */
+
+.project--02 {
+    display: grid;
+
+    grid-template-columns:
+        31%
+        minmax(0, 1fr);
+
+    grid-template-areas:
+        "head visual"
+        "info visual";
+
+    gap: 26px 70px;
+
+    align-items: end;
+
+    margin-bottom: 130px;
+}
+
+
+.project--02 .project-header {
+    grid-area: head;
+}
+
+
+.project--02 .project-title-area {
+    margin-bottom: 22px;
+}
+
+
+.project--02 .project-key-message {
+    margin-bottom: 12px;
+
+    font-size: clamp(30px, calc(2vw + 2px), 40px);
+    font-weight: 700;
+
+    line-height: 1.18;
+
+    letter-spacing: -0.045em;
+}
+
+
+.project--02 .project-summary {
+    max-width: 340px;
+}
+
+
+.project--02 .project-visual {
+    grid-area: visual;
+
+    aspect-ratio: 1120 / 570;
+}
+
+
+.project--02 .project-info {
+    grid-area: info;
+
+    display: grid;
+
+    justify-items: start;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   PROJECT 03
+   ========================================================= */
+
+.project--03 {
+    margin-bottom: 42px;
+
+    padding-block: 88px;
+
+    background-color: var(--color-section);
+
+    box-shadow:
+        0 0 0 100vmax
+        var(--color-section);
+
+    clip-path: inset(0 -100vmax);
+}
+
+
+.project--03 .project-header {
+    display: flex;
+    align-items: baseline;
+
+    gap: 28px;
+
+    margin-bottom: 72px;
+}
+
+
+.project--03 .project-body {
+    display: grid;
+
+    grid-template-columns:
+        38%
+        minmax(0, 1fr);
+
+    gap: 50px 70px;
+
+    align-items: center;
+}
+
+
+.project-feature {
+    display: grid;
+
+    gap: 18px;
+}
+
+
+.project-feature strong {
+    font-size: clamp(44px, 4vw, 68px);
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.06em;
+}
+
+
+.project-feature p {
+    font-size: clamp(26px, calc(2vw + 2px), 36px);
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.04em;
+}
+
+
+.project--03 .project-visual {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(120px, 1fr));
+
+    align-items: end;
+
+    gap: 24px;
+
+    aspect-ratio: 920 / 560;
+
+    background-color: transparent;
+}
+
+
+.project-placeholder--phone {
+    width: min(100%, 220px);
+
+    aspect-ratio: 9 / 16;
+
+    justify-self: center;
+
+    border-radius: 18px;
+
+    transform-origin: center bottom;
+}
+
+
+.project--03 .project-info {
+    display: grid;
+
+    justify-items: start;
+
+    gap: 12px;
+
+    margin-top: 48px;
+}
+
+
+/* =========================================================
+   PROJECT 04 / 05
+   ========================================================= */
+
+.project-small-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 100px;
+}
+
+
+.project--small .project-visual {
+    aspect-ratio: 16 / 9;
+}
+
+
+.project--balenciaga .balenciaga-cover {
+    display: block;
+    position: relative;
+    container-type: inline-size;
+    background: #111;
+    border-radius: 0;
+    aspect-ratio: 16 / 9;
+}
+
+.balenciaga-cover__identity {
+    position: absolute;
+    left: 6%;
+    bottom: 7%;
+    z-index: 1;
+    display: grid;
+    gap: 12px;
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, .5);
+}
+
+.balenciaga-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .30) 35%, rgba(0, 0, 0, .40) 65%, rgba(0, 0, 0, .65) 100%);
+    pointer-events: none;
+}
+
+.balenciaga-cover__identity strong {
+    font-size: clamp(24px, 5.5cqw, 48px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.045em;
+}
+
+.balenciaga-cover__identity > span {
+    font-size: clamp(12px, 1.8cqw, 16px);
+    font-weight: 500;
+    letter-spacing: .03em;
+}
+
+.project--balenciaga .balenciaga-cover__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+.project-action--pending { opacity: .55; cursor: default; }
+
+.balenciaga-cover__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #f7f6f3;
+    opacity: 0;
+    transition: opacity 0.45s ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+}
+.balenciaga-cover.is-previewing .balenciaga-cover__video { opacity: 1; }
+
+
+.project--small .project-header {
+    margin: 14px 0 8px;
+}
+
+
+.project--small .project-info {
+    display: grid;
+
+    justify-items: start;
+
+    gap: 12px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid var(--color-line);
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-section {
+    padding-block: 64px 72px;
+
+    background-color: var(--color-section);
+
+    border-top: 1px solid var(--color-line);
+}
+
+
+.about-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(380px, 0.85fr);
+
+    gap: 120px;
+
+    align-items: start;
+}
+
+
+.about-label {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+}
+
+
+.about-title-area h2 {
+    max-width: 720px;
+
+    font-size: clamp(34px, calc(2vw + 10px), 48px);
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.04em;
+}
+
+
+.about-description {
+    max-width: 580px;
+
+    margin-top: 24px;
+
+    color: var(--color-muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.about-content {
+    display: grid;
+
+    gap: 32px;
+    align-self: center;
+}
+
+
+.about-item h3 {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.07em;
+}
+
+
+.about-item p,
+.about-item li {
+    color: var(--color-muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.about-list {
+    display: grid;
+
+    gap: 4px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-section {
+    padding-block: 64px 54px;
+
+    background-color: var(--color-section);
+
+    border-top: 1px solid var(--color-line);
+}
+
+
+.contact-section h2 {
+    font-size: clamp(54px, calc(4vw + 4px), 76px);
+    font-weight: 800;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.05em;
+}
+
+
+.contact-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-top: 28px;
+}
+
+
+.contact-email {
+    padding-bottom: 2px;
+
+    border-bottom: 1px solid currentColor;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.external-link,
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.contact-links a {
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    color: var(--color-muted);
+
+    border-top: 1px solid var(--color-line);
+}
+
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 74px;
+
+    gap: 24px;
+}
+
+
+.footer p,
+.footer a {
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   HOVER CAPABLE DEVICES
+   ========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .gnb-list a:hover {
+        background-color: rgba(255, 255, 255, 0.72);
+        border-color: rgba(255, 255, 255, 0.9);
+
+        box-shadow:
+            0 4px 12px rgba(0, 0, 0, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+
+    .project-action:hover {
+        background-color: var(--color-text);
+        border-color: var(--color-text);
+
+        color: #fff;
+    }
+
+
+    .project-action:hover .project-action__icon {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-section,
+    .work-section,
+    .about-section,
+    .contact-section,
+    .footer {
+        padding-inline: 32px;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        width: calc(100% - 64px);
+    }
+
+
+    .header-inner {
+        padding-inline: 20px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        display: block;
+
+        min-height: auto;
+
+        padding-block: 140px 120px;
+    }
+
+
+    .hero-section .inner {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "title"
+            "content"
+            "scroll";
+
+        gap: 44px;
+    }
+
+
+    .hero-title {
+        font-size: 64px;
+    }
+
+
+    .hero-message {
+        font-size: 34px;
+    }
+
+
+    /* WORK */
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+
+    /* PROJECT 01 */
+
+    .project--01 {
+        margin-bottom: 100px;
+    }
+
+
+    .project--01 .project-visual {
+        grid-template-columns: 1fr;
+
+        aspect-ratio: auto;
+    }
+
+
+    .project--01 .project-placeholder {
+        min-height: 280px;
+    }
+
+
+    /* PROJECT 02 */
+
+    .project--02 {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "head"
+            "visual"
+            "info";
+
+        gap: 24px;
+
+        margin-bottom: 100px;
+    }
+
+
+    .project--02 .project-key-message {
+        font-size: 32px;
+    }
+
+
+    .project--02 .project-visual {
+        aspect-ratio: 16 / 9;
+    }
+
+
+    /* PROJECT 03 */
+
+    .project--03 {
+        padding-block: 72px;
+    }
+
+
+    .project--03 .project-header {
+        margin-bottom: 40px;
+    }
+
+
+    .project--03 .project-body {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .project-feature strong {
+        font-size: 60px;
+    }
+
+
+    .project-feature p {
+        font-size: 32px;
+    }
+
+
+    .project--03 .project-visual {
+        max-width: 700px;
+
+        margin-inline: auto;
+    }
+
+
+    /* ABOUT */
+
+    .about-layout {
+        grid-template-columns: 1fr;
+
+        gap: 48px;
+    }
+
+
+    .about-main {
+        max-width: 720px;
+    }
+
+
+    .about-title-area h2 {
+        font-size: 42px;
+    }
+
+
+    .about-content {
+        max-width: 620px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section h2 {
+        font-size: 68px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-section,
+    .work-section,
+    .about-section,
+    .contact-section,
+    .footer {
+        padding-inline: 20px;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        top: 10px;
+
+        width: calc(100% - 24px);
+    }
+
+
+    .glass-header {
+        border-radius: 14px;
+    }
+
+
+    .header-inner {
+        min-height: 46px;
+
+        padding-inline: 12px;
+    }
+
+
+    .logo a {
+        min-height: 36px;
+    }
+
+
+    .gnb-list {
+        gap: 2px;
+    }
+
+
+    .gnb-list a {
+        min-height: 34px;
+
+        padding-inline: 10px;
+
+        border-radius: 14px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        padding-block: 112px 90px;
+    }
+
+
+    .hero-section .inner {
+        gap: 34px;
+    }
+
+
+    .hero-title {
+        font-size: 52px;
+    }
+
+
+    .hero-role {
+        margin-top: 12px;
+    }
+
+
+    .hero-message {
+        font-size: 28px;
+
+        line-height: 1.3;
+    }
+
+
+    .hero-description {
+        margin-top: 18px;
+
+        line-height: 1.65;
+    }
+
+
+    /* WORK */
+
+    .work-section {
+        padding-bottom: 80px;
+    }
+
+
+    .section-heading {
+        margin-bottom: 22px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+
+    /* PROJECT */
+
+    .project h3 {
+        font-size: 20px;
+    }
+
+
+    .project-action {
+        min-height: 44px;
+
+        padding-inline: 16px;
+
+        border-radius: var(--radius-button-mobile);
+    }
+
+
+    /* PROJECT 01 */
+
+    .project--01 {
+        margin-bottom: 88px;
+    }
+
+
+    .project--01 .project-visual {
+        gap: 12px;
+    }
+
+
+    .project--01 .project-placeholder {
+        min-height: 220px;
+    }
+
+
+    .project--01 .project-placeholder--side {
+        min-height: 160px;
+    }
+
+
+    .project--01 .project-header,
+    .project--01 .project-info {
+        margin-top: 14px;
+    }
+
+
+    /* PROJECT 02 */
+
+    .project--02 {
+        margin-bottom: 88px;
+    }
+
+
+    .project--02 .project-title-area {
+        margin-bottom: 18px;
+    }
+
+
+    .project--02 .project-key-message {
+        font-size: 28px;
+    }
+
+
+    .project--02 .project-visual {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    /* PROJECT 03 */
+
+    .project--03 {
+        margin-bottom: 28px;
+
+        padding-block: 56px;
+    }
+
+
+    .project--03 .project-header {
+        display: grid;
+
+        gap: 8px;
+
+        margin-bottom: 32px;
+    }
+
+
+    .project--03 .project-body {
+        gap: 32px;
+    }
+
+
+    .project-feature {
+        gap: 14px;
+    }
+
+
+    .project-feature strong {
+        font-size: 52px;
+    }
+
+
+    .project-feature p {
+        font-size: 28px;
+    }
+
+
+    .project--03 .project-visual {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+
+        aspect-ratio: auto;
+    }
+
+
+    .project-placeholder--phone {
+        width: min(100%, 190px);
+
+        border-radius: 16px;
+    }
+
+
+    .project--03 .project-info {
+        margin-top: 32px;
+    }
+
+
+    /* PROJECT 04 / 05 */
+
+    .project-small-grid {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+
+        margin-bottom: 72px;
+    }
+
+
+    .project--small .project-visual {
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .project--small .project-header {
+        margin-top: 12px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        padding-block: 54px 60px;
+    }
+
+
+    .about-layout {
+        gap: 40px;
+    }
+
+
+    .about-label {
+        margin-bottom: 12px;
+    }
+
+
+    .about-title-area h2 {
+        font-size: 36px;
+    }
+
+
+    .about-description {
+        margin-top: 20px;
+    }
+
+
+    .about-content {
+        gap: 26px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        padding-block: 54px 48px;
+    }
+
+
+    .contact-section h2 {
+        font-size: 58px;
+    }
+
+
+    .contact-bottom {
+        display: grid;
+
+        gap: 20px;
+
+        margin-top: 24px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-inner {
+        align-items: flex-start;
+
+        min-height: auto;
+
+        padding-block: 24px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .header-inner {
+        padding-inline: 10px;
+    }
+
+
+    .gnb-list a {
+        padding-inline: 8px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        padding-block: 104px 76px;
+    }
+
+
+    .hero-title {
+        font-size: 46px;
+    }
+
+
+    .hero-message {
+        font-size: 26px;
+    }
+
+
+    /* PROJECT 03 */
+
+    .project-feature strong {
+        font-size: 46px;
+    }
+
+
+    .project-feature p {
+        font-size: 26px;
+    }
+
+
+    /* ABOUT */
+
+    .about-title-area h2 {
+        font-size: 32px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section h2 {
+        font-size: 50px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-inner {
+        display: grid;
+
+        gap: 8px;
+    }
+
+}
