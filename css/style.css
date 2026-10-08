@@ -783,25 +783,30 @@
 .about-title-area h2 {
     max-width: 720px;
 
-    font-size: clamp(34px, calc(2vw + 10px), 48px);
-    font-weight: 700;
+    color: var(--color-muted);
 
-    line-height: 1.15;
+    font-size: clamp(20px, 1.2vw, 24px);
+    font-weight: 600;
 
-    letter-spacing: -0.04em;
+    line-height: 1.4;
+
+    letter-spacing: -0.02em;
 }
 
 
 .about-description {
-    max-width: 580px;
+    max-width: 800px;
 
-    margin-top: 24px;
+    margin-top: 18px;
 
-    color: var(--color-muted);
+    color: var(--color-text);
 
-    font-size: 16px;
+    font-size: clamp(24px, 1.75vw, 32px);
+    font-weight: 600;
 
-    line-height: 1.7;
+    line-height: 1.48;
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
 }
 
 
@@ -1123,7 +1128,7 @@
 
 
     .about-title-area h2 {
-        font-size: 42px;
+        font-size: 22px;
     }
 
 
@@ -1414,12 +1419,13 @@
 
 
     .about-title-area h2 {
-        font-size: 36px;
+        font-size: 20px;
     }
 
 
     .about-description {
-        margin-top: 20px;
+        margin-top: 16px;
+        font-size: 22px;
     }
 
 
@@ -1510,7 +1516,12 @@
     /* ABOUT */
 
     .about-title-area h2 {
-        font-size: 32px;
+        font-size: 18px;
+    }
+
+
+    .about-description {
+        font-size: 20px;
     }
 
 
